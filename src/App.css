@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.app-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"], .agregarBoton, .eliminarBoton {
+  width: 100%; /* Ajustar para que ocupen todo el ancho disponible */
+  padding: 10px;
+  margin-top: 10px; /* Espacio entre los elementos */
+  box-sizing: border-box; /* Incluye el padding y border en el ancho total */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.eliminarBoton {
+  background-color: #ff0000;
   color: white;
+  font-size: 14px;
+  padding: 5px 10px; /* Más pequeño que los botones azules */
 }
 
-.App-link {
-  color: #61dafb;
+.agregarBoton {
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px; /* Agrega espacio debajo del botón agregar */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #0056b3; /* Oscurecer el botón al pasar el mouse */
+}
+
+.tarea-lista {
+  margin-top: 20px;
+}
+
+.tarea-container {
+  display: flex;
+  justify-content: space-between; /* Alinea los hijos a los extremos opuestos */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 10px;
+  border-bottom: 2px solid #ccc; /* Opcional: añade una línea entre tareas */
+}
+
+.tarea-texto {
+  flex-grow: 1; /* Permite que el texto de la tarea ocupe todo el espacio disponible */
+}
+
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
